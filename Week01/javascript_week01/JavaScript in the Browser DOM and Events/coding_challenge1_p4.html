@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="message">Bắt đầu đoán số...</p>
+    <p>Điểm: <span class="score">20</span></p>
+    <div class="number" style="width: 15rem">?</div>
+    <input class="guess" type="number" />
+    <button class="again">Again!</button>
+    <script>
+      let secretNumber = Math.trunc(Math.random() * 20) + 1;
+      let score = 20;
+      document.querySelector(".again").addEventListener("click", function () {
+        score = 20;
+        secretNumber = Math.trunc(Math.random() * 20) + 1;
+        document.querySelector(".message").textContent = "Bắt đầu đoán số...";
+        document.querySelector(".score").textContent = score;
+        document.querySelector(".number").textContent = "?";
+        document.querySelector(".guess").value = "";
+        document.querySelector("body").style.backgroundColor = "#222";
+        document.querySelector(".number").style.width = "15rem";
+      });
+    </script>
+  </body>
+</html>

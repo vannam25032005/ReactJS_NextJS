@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <script>
+          function inDuBaoNhietDo(mangNhietDo) {
+            let chuoiKetQua = "";
+            for (let i = 0; i < mangNhietDo.length; i++) {
+              chuoiKetQua += `... ${mangNhietDo[i]}°C sau ${i + 1} ngày `;
+            }
+            console.log(chuoiKetQua);
+          }
+          console.log("Dữ liệu 1:");
+          inDuBaoNhietDo([17, 21, 23]);
+          console.log("\nDữ liệu 2:");
+          inDuBaoNhietDo([12, 5, -5, 0, 4]);
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
