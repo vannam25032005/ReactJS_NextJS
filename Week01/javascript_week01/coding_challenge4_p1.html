@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tinhTienTip(tienHoaDon) {
+        let tienTip =
+          tienHoaDon >= 50 && tienHoaDon <= 300
+            ? tienHoaDon * 0.15
+            : tienHoaDon * 0.2;
+        let tongTien = tienHoaDon + tienTip;
+        console.log(
+          `Hóa đơn là ${tienHoaDon}, tiền tip là ${tienTip.toFixed(
+            2
+          )}, và tổng tiền phải trả là ${tongTien.toFixed(2)}`
+        );
+      }
+      tinhTienTip(275);
+      tinhTienTip(40);
+      tinhTienTip(430);
+    </script>
+  </body>
+</html>

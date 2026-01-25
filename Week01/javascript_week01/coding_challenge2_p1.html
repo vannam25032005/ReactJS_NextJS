@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tinhBMI(canNang, chieuCao) {
+        return canNang / (chieuCao * chieuCao);
+      }
+      let canNangMark = 78;
+      let chieuCaoMark = 1.69;
+      let canNangJohn = 92;
+      let chieuCaoJohn = 1.95;
+      let bmiMark = tinhBMI(canNangMark, chieuCaoMark);
+      let bmiJohn = tinhBMI(canNangJohn, chieuCaoJohn);
+      if (bmiMark > bmiJohn) {
+        console.log(
+          `BMI của Mark ${bmiMark.toFixed(
+            1
+          )} cao hơn BMI của John ${bmiJohn.toFixed(1)}`
+        );
+      } else if (bmiJohn > bmiMark) {
+        console.log(
+          `BMI của John ${bmiJohn.toFixed(
+            1
+          )} cao hơn BMI của Mark ${bmiMark.toFixed(1)}`
+        );
+      } else {
+        console.log(
+          `BMI của Mark ${bmiMark.toFixed(
+            1
+          )} bằng BMI của John ${bmiJohn.toFixed(1)}`
+        );
+      }
+    </script>
+  </body>
+</html>

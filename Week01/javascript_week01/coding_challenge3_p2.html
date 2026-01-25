@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let mark = {
+        hoTen: "Mark Miller",
+        canNang: 78,
+        chieuCao: 1.69,
+        tinhBMI: function () {
+          this.bmi = this.canNang / this.chieuCao ** 2;
+          return this.bmi;
+        },
+      };
+      let john = {
+        hoTen: "John Smith",
+        canNang: 92,
+        chieuCao: 1.95,
+        tinhBMI: function () {
+          this.bmi = this.canNang / this.chieuCao ** 2;
+          return this.bmi;
+        },
+      };
+      mark.tinhBMI();
+      john.tinhBMI();
+      if (mark.bmi > john.bmi) {
+        console.log(
+          `BMI của ${mark.hoTen} ${mark.bmi.toFixed(1)} cao hơn BMI của ${
+            john.hoTen
+          } ${john.bmi.toFixed(1)}`
+        );
+      } else if (john.bmi > mark.bmi) {
+        console.log(
+          `BMI của ${john.hoTen} ${john.bmi.toFixed(1)} cao hơn BMI của ${
+            mark.hoTen
+          } ${mark.bmi.toFixed(1)}`
+        );
+      } else {
+        console.log(
+          `BMI của ${mark.hoTen} và ${john.hoTen} bằng nhau ${mark.bmi.toFixed(
+            1
+          )}`
+        );
+      }
+    </script>
+  </body>
+</html>

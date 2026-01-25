@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tinhBMI(canNang, chieuCao) {
+        return canNang / chieuCao ** 2;
+      }
+      let canNangMark_1 = 78;
+      let chieuCaoMark_1 = 1.69;
+      let canNangJohn_1 = 92;
+      let chieuCaoJohn_1 = 1.95;
+      let bmiMark_1 = tinhBMI(canNangMark_1, chieuCaoMark_1);
+      let bmiJohn_1 = tinhBMI(canNangJohn_1, chieuCaoJohn_1);
+      let markBMIcaoHon_1 = bmiMark_1 > bmiJohn_1;
+      console.log("BMI của Mark là:", bmiMark_1.toFixed(2));
+      console.log("BMI của John là:", bmiJohn_1.toFixed(2));
+      console.log("Mark có BMI cao hơn John không?", markBMIcaoHon_1);
+      console.log("");
+      let canNangMark_2 = 95;
+      let chieuCaoMark_2 = 1.88;
+      let canNangJohn_2 = 85;
+      let chieuCaoJohn_2 = 1.76;
+      let bmiMark_2 = tinhBMI(canNangMark_2, chieuCaoMark_2);
+      let bmiJohn_2 = tinhBMI(canNangJohn_2, chieuCaoJohn_2);
+      let markBMIcaoHon_2 = bmiMark_2 > bmiJohn_2;
+      console.log("BMI của Mark là:", bmiMark_2.toFixed(2));
+      console.log("BMI của John là:", bmiJohn_2.toFixed(2));
+      console.log("Mark có BMI cao hơn John không?", markBMIcaoHon_2);
+    </script>
+  </body>
+</html>

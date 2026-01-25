@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tinhTienTip(hoaDon) {
+        return hoaDon >= 50 && hoaDon <= 300 ? hoaDon * 0.15 : hoaDon * 0.2;
+      }
+      console.log("Tiền tip cho hóa đơn 100 là:", tinhTienTip(100));
+      let hoaDon = [125, 555, 44];
+      let tienTip = [
+        tinhTienTip(hoaDon[0]),
+        tinhTienTip(hoaDon[1]),
+        tinhTienTip(hoaDon[2]),
+      ];
+      let tongTien = [
+        hoaDon[0] + tienTip[0],
+        hoaDon[1] + tienTip[1],
+        hoaDon[2] + tienTip[2],
+      ];
+      console.log("Danh sách hóa đơn:", hoaDon);
+      console.log("Danh sách tiền tip:", tienTip);
+      console.log("Danh sách tổng tiền phải trả:", tongTien);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tinhTienTip(hoaDon) {
+        return hoaDon >= 50 && hoaDon <= 300 ? hoaDon * 0.15 : hoaDon * 0.2;
+      }
+      let hoaDon = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+      let tienTip = [];
+      let tongTien = [];
+      for (let i = 0; i < hoaDon.length; i++) {
+        let tip = tinhTienTip(hoaDon[i]);
+        tienTip.push(tip);
+        tongTien.push(hoaDon[i] + tip);
+      }
+      console.log("Danh sách hóa đơn:", hoaDon);
+      console.log("Danh sách tiền tip:", tienTip);
+      console.log("Danh sách tổng tiền:", tongTien);
+      function tinhTrungBinh(mang) {
+        let tong = 0;
+        for (let i = 0; i < mang.length; i++) {
+          tong += mang[i];
+        }
+        return tong / mang.length;
+      }
+      let trungBinhTongTien = tinhTrungBinh(tongTien);
+      console.log(
+        "Giá trị trung bình của tổng tiền là:",
+        trungBinhTongTien.toFixed(2)
+      );
+    </script>
+  </body>
+</html>

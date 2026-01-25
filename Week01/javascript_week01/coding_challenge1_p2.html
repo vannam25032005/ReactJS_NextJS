@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const tinhTrungBinh = (diem1, diem2, diem3) =>
+        (diem1 + diem2 + diem3) / 3;
+      function kiemTraNguoiThang(trungBinhDolphins, trungBinhKoalas) {
+        if (trungBinhDolphins >= 2 * trungBinhKoalas) {
+          console.log(
+            `Dolphins thắng (${trungBinhDolphins.toFixed(
+              1
+            )} vs ${trungBinhKoalas.toFixed(1)})`
+          );
+        } else if (trungBinhKoalas >= 2 * trungBinhDolphins) {
+          console.log(
+            `Koalas thắng (${trungBinhKoalas.toFixed(
+              1
+            )} vs ${trungBinhDolphins.toFixed(1)})`
+          );
+        } else {
+          console.log(
+            "Không đội nào thắng (không đội nào đạt điểm gấp đôi đội còn lại)."
+          );
+        }
+      }
+      console.log("DỮ LIỆU 1");
+      let diemTrungBinhDolphins_1 = tinhTrungBinh(44, 23, 71);
+      let diemTrungBinhKoalas_1 = tinhTrungBinh(65, 54, 49);
+      kiemTraNguoiThang(diemTrungBinhDolphins_1, diemTrungBinhKoalas_1);
+      console.log("\nDỮ LIỆU 2");
+      let diemTrungBinhDolphins_2 = tinhTrungBinh(85, 54, 41);
+      let diemTrungBinhKoalas_2 = tinhTrungBinh(23, 34, 27);
+      kiemTraNguoiThang(diemTrungBinhDolphins_2, diemTrungBinhKoalas_2);
+    </script>
+  </body>
+</html>
