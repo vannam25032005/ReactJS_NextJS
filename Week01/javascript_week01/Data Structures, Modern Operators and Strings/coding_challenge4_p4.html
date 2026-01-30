@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.body.append(document.createElement("textarea"));
+      document.body.append(document.createElement("button"));
+
+      const oNhap = document.querySelector("textarea");
+      const nutBam = document.querySelector("button");
+      nutBam.textContent = "Chuyển đổi";
+
+      nutBam.addEventListener("click", function () {
+        const danhSachDong = oNhap.value.split("\n");
+
+        for (const [chiSo, dong] of danhSachDong.entries()) {
+          const dongChuan = dong.trim().toLowerCase();
+          if (!dongChuan) continue;
+          const [tu1, tu2] = dongChuan.split("_");
+          const camelCase = tu1 + tu2.replace(tu2[0], tu2[0].toUpperCase());
+          const dauCheck = "✅".repeat(chiSo + 1);
+          console.log(camelCase.padEnd(20, " ") + dauCheck);
+        }
+      });
+    </script>
+  </body>
+</html>

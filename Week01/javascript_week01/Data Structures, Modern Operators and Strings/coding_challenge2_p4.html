@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const game = {
+        team1: "Bayern Munich",
+        team2: "Borrussia Dortmund",
+        players: [
+          [
+            "Neuer",
+            "Pavard",
+            "Martinez",
+            "Alaba",
+            "Davies",
+            "Kimmich",
+            "Goretzka",
+            "Coman",
+            "Muller",
+            "Gnarby",
+            "Lewandowski",
+          ],
+          [
+            "Burki",
+            "Schulz",
+            "Hummels",
+            "Akanji",
+            "Hakimi",
+            "Weigl",
+            "Witsel",
+            "Hazard",
+            "Brandt",
+            "Sancho",
+            "Gotze",
+          ],
+        ],
+        score: "4:0",
+        scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+        date: "Nov 9th, 2037",
+        odds: { team1: 1.33, x: 3.25, team2: 6.5 },
+      };
+      for (const [chiSo, tenCauThu] of game.scored.entries()) {
+        console.log(`Goal ${chiSo + 1}: ${tenCauThu}`);
+      }
+      const cacTiLe = Object.values(game.odds);
+      let tongTiLe = 0;
+      for (const tiLe of cacTiLe) tongTiLe += tiLe;
+      const tiLeTrungBinh = tongTiLe / cacTiLe.length;
+      console.log("Average odd:", tiLeTrungBinh);
+      for (const [key, tiLe] of Object.entries(game.odds)) {
+        const chuoiTeam = key === "x" ? "draw" : `victory ${game[key]}`;
+
+        console.log(`Odd of ${chuoiTeam}: ${tiLe}`);
+      }
+      const scorers = {};
+      for (const tenCauThu of game.scored) {
+        scorers[tenCauThu] = (scorers[tenCauThu] || 0) + 1;
+      }
+      console.log(scorers);
+    </script>
+  </body>
+</html>

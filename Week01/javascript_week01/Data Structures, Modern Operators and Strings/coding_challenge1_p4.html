@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const game = {
+        team1: "Bayern Munich",
+        team2: "Borrussia Dortmund",
+        players: [
+          [
+            "Neuer",
+            "Pavard",
+            "Martinez",
+            "Alaba",
+            "Davies",
+            "Kimmich",
+            "Goretzka",
+            "Coman",
+            "Muller",
+            "Gnarby",
+            "Lewandowski",
+          ],
+          [
+            "Burki",
+            "Schulz",
+            "Hummels",
+            "Akanji",
+            "Hakimi",
+            "Weigl",
+            "Witsel",
+            "Hazard",
+            "Brandt",
+            "Sancho",
+            "Gotze",
+          ],
+        ],
+        score: "4:0",
+        scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+        date: "Nov 9th, 2037",
+        odds: { team1: 1.33, x: 3.25, team2: 6.5 },
+      };
+      const [cauThuDoi1, cauThuDoi2] = game.players;
+      const [thuMon, ...cauThuSan] = cauThuDoi1;
+      const gk1 = thuMon;
+      const fieldPlayers1 = cauThuSan;
+      const tatCaCauThu = [...cauThuDoi1, ...cauThuDoi2];
+      const players1Final = [...cauThuDoi1, "Thiago", "Coutinho", "Perisic"];
+      const { team1: tiLeTeam1, draw: tiLeHoa, team2: tiLeTeam2 } = game.odds;
+      function inBanThang(...tenCauThu) {
+        console.log(`Tổng số bàn thắng: ${tenCauThu.length}`);
+      }
+      inBanThang("Davies", "Muller", "Lewandowski", "Kimmich");
+      inBanThang(...game.scored);
+      tiLeTeam1 < tiLeTeam2 && console.log("Đội 1 có khả năng thắng cao hơn");
+      tiLeTeam2 < tiLeTeam1 && console.log("Đội 2 có khả năng thắng cao hơn");
+    </script>
+  </body>
+</html>
