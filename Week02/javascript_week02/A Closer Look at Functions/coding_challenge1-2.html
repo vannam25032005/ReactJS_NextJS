@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tiêu đề</h1>
+    <script>
+      (function () {
+        const header = document.querySelector("h1");
+        header.style.color = "red";
+
+        document.body.addEventListener("click", function () {
+          header.style.color = "blue";
+        });
+      })();
+      const poll = {
+        cauHoi: "What is your favourite programming language?",
+        luaChon: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
+        cauTraLoi: new Array(4).fill(0),
+
+        dangKyCauTraLoiMoi() {
+          const nhap = Number(
+            prompt(
+              `${this.cauHoi}\n${this.luaChon.join("\n")}\n(Write option number)`,
+            ),
+          );
+          if (
+            typeof nhap === "number" &&
+            nhap >= 0 &&
+            nhap < this.cauTraLoi.length
+          ) {
+            this.cauTraLoi[nhap]++;
+          }
+
+          this.hienThiKetQua();
+          this.hienThiKetQua("string");
+        },
+
+        hienThiKetQua(kieu = "array") {
+          if (kieu === "array") {
+            console.log(this.cauTraLoi);
+          } else if (kieu === "string") {
+            console.log(`Poll results are ${this.cauTraLoi.join(", ")}`);
+          }
+        },
+      };
+      const Data1 = [5, 2, 3];
+      const Data2 = [1, 5, 3, 9, 6, 1];
+
+      poll.hienThiKetQua.call({ cauTraLoi: Data1 }, "array");
+      poll.hienThiKetQua.call({ cauTraLoi: Data1 }, "string");
+
+      poll.hienThiKetQua.call({ cauTraLoi: Data2 }, "array");
+      poll.hienThiKetQua.call({ cauTraLoi: Data2 }, "string");
+    </script>
+  </body>
+</html>

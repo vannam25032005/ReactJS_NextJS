@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const whereAmI = function (viDo, kinhDo) {
+        fetch(`https://geocode.xyz/${viDo},${kinhDo}?geoit=json`)
+          .then((phanHoi) => {
+            if (!phanHoi.ok)
+              throw new Error(`Lỗi geocoding: ${phanHoi.status}`);
+            return phanHoi.json();
+          })
+          .then((duLieu) => {
+            console.log(duLieu);
+
+            const thanhPho = duLieu.city;
+            const quocGia = duLieu.country;
+
+            console.log(`You are in ${thanhPho}, ${quocGia}`);
+            return fetch(`https://restcountries.com/v3.1/name/${quocGia}`);
+          })
+          .then((phanHoi) => {
+            if (!phanHoi.ok) throw new Error("Không tìm thấy quốc gia");
+            return phanHoi.json();
+          })
+          .then((duLieu) => {
+            console.log(duLieu[0]);
+          })
+          .catch((loi) => console.error(`Có lỗi xảy ra: ${loi.message}`));
+      };
+      whereAmI(52.508, 13.381);
+      whereAmI(19.037, 72.873);
+      whereAmI(-33.933, 18.474);
+    </script>
+  </body>
+</html>

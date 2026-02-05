@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="images"></div>
+    <script>
+      const khungAnh = document.querySelector(".images");
+
+      const createImage = function (duongDanAnh) {
+        return new Promise(function (resolve, reject) {
+          const hinh = document.createElement("img");
+          hinh.src = duongDanAnh;
+
+          hinh.addEventListener("load", function () {
+            khungAnh.append(hinh);
+            resolve(hinh);
+          });
+
+          hinh.addEventListener("error", function () {
+            reject(new Error("Không tải được ảnh"));
+          });
+        });
+      };
+
+      const cho = function (giay) {
+        return new Promise(function (resolve) {
+          setTimeout(resolve, giay * 1000);
+        });
+      };
+
+      let anhHienTai;
+      createImage("img/img-1.png")
+        .then(function (anh) {
+          anhHienTai = anh;
+          return cho(2);
+        })
+        .then(function () {
+          anhHienTai.style.display = "none";
+          return createImage("img/img-2.png");
+        })
+        .then(function (anh) {
+          anhHienTai = anh;
+          return cho(2);
+        })
+        .then(function () {
+          anhHienTai.style.display = "none";
+        })
+        .catch(function (loi) {
+          console.error(loi);
+        });
+    </script>
+  </body>
+</html>
