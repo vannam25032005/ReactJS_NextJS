@@ -1,0 +1,27 @@
+.ungDung {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: 0.3s;
+}
+
+.sang {
+  background-color: white;
+  color: black;
+}
+
+.toi {
+  background-color: #121212;
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
