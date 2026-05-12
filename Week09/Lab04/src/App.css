@@ -1,0 +1,543 @@
+.page-shell {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.site-header {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 42px;
+  border-bottom: 1px solid #edf0f4;
+  background: #ffffff;
+}
+
+.brand img {
+  display: block;
+  width: 132px;
+  height: auto;
+}
+
+.search-box {
+  width: 330px;
+  min-width: 220px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: #f4f5f8;
+  color: #c2c7d1;
+}
+
+.search-box input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #4b5565;
+  font: inherit;
+}
+
+.search-box input::placeholder {
+  color: #bdc3cf;
+}
+
+.main-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  white-space: nowrap;
+}
+
+.main-nav a,
+.breadcrumb a,
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-nav a {
+  color: #707887;
+  font-size: 14px;
+}
+
+.recipe-box {
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  border-radius: 12px;
+  background: #fff0f6;
+  color: #f54b8c;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.recipe-box img {
+  width: 15px;
+  height: 15px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+main {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 18px 32px 72px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 72px;
+  color: #4f5663;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.breadcrumb a:last-child {
+  color: #f54b8c;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: minmax(360px, 1fr) 508px;
+  align-items: center;
+  gap: 86px;
+}
+
+.hero-copy {
+  text-align: left;
+}
+
+.eyebrow {
+  margin: 0 0 22px;
+  color: #202632;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 480px;
+  margin-bottom: 30px;
+  color: #f54b8c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 32px;
+  line-height: 1.45;
+}
+
+.benefits {
+  display: grid;
+  gap: 20px;
+  padding: 0;
+  margin: 0 0 50px;
+  list-style: none;
+}
+
+.benefits li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: center;
+  gap: 32px;
+  color: #555d6b;
+  font-size: 14px;
+}
+
+.benefit-check {
+  width: 17px;
+  height: 17px;
+  position: relative;
+  display: inline-block;
+  border: 2px solid #ffb51f;
+  border-radius: 50%;
+}
+
+.benefit-check::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #ffb51f;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.price {
+  margin-bottom: 6px;
+  color: #424959;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.billing {
+  margin-bottom: 34px;
+  color: #5c6472;
+  font-size: 16px;
+}
+
+.primary-button {
+  width: 420px;
+  max-width: 100%;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 9px;
+  background: #f43f86;
+  color: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary-button img {
+  width: 15px;
+  height: 15px;
+  filter: brightness(0) invert(1);
+}
+
+.cancel-link {
+  display: block;
+  width: fit-content;
+  margin: 28px auto 0;
+  color: #fb5d99;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.hero-copy .cancel-link {
+  margin-left: 140px;
+}
+
+.hero-image {
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.access-section {
+  padding-top: 112px;
+  text-align: center;
+}
+
+.access-section h2,
+.subscribe-section h2 {
+  color: #f54b8c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 30px;
+  line-height: 1.25;
+}
+
+.access-section h2 {
+  margin-bottom: 40px;
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.access-card {
+  min-height: 116px;
+  padding: 20px 22px;
+  border: 1px solid #e9ebef;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.02);
+}
+
+.access-card h3 {
+  margin-bottom: 12px;
+  color: #3d4552;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.access-card p {
+  margin: 0;
+  color: #646c7b;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.subscribe-section {
+  max-width: 720px;
+  margin: 112px auto 0;
+  text-align: center;
+}
+
+.section-logo {
+  width: 132px;
+  height: auto;
+  margin-bottom: 14px;
+}
+
+.subscribe-section h2 {
+  margin-bottom: 16px;
+}
+
+.subscribe-section p {
+  margin-bottom: 26px;
+  color: #606877;
+  font-size: 16px;
+}
+
+.plan-form {
+  width: 330px;
+  max-width: 100%;
+  display: grid;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.plan-option {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  border: 1px solid #ccd2dc;
+  border-radius: 6px;
+  color: #394150;
+  font-size: 16px;
+  text-align: left;
+}
+
+.plan-option input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #f43f86;
+}
+
+.plan-form .primary-button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1.65fr 0.7fr 0.7fr;
+  gap: 96px;
+  padding: 42px 48px 50px;
+  background: #1f232a;
+  color: #d9dde5;
+  text-align: left;
+}
+
+.footer-column h2 {
+  margin-bottom: 22px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.footer-column p {
+  max-width: 500px;
+  margin-bottom: 18px;
+  color: #f1f3f7;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.email-form {
+  max-width: 465px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 92px;
+}
+
+.email-form input {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 5px;
+  font: inherit;
+}
+
+.email-form input::placeholder {
+  color: #b9bfca;
+}
+
+.email-form button {
+  width: 56px;
+  border: 0;
+  border-radius: 5px;
+  background: #f43f86;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.footer-brand img {
+  width: 142px;
+  height: auto;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column a {
+  margin-bottom: 17px;
+  color: #d7dbe3;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-subtitle {
+  margin-top: 50px;
+}
+
+@media (max-width: 1040px) {
+  .site-header {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 18px 24px;
+  }
+
+  .main-nav {
+    order: 5;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    overflow-x: auto;
+  }
+
+  .search-box {
+    flex: 1;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-image {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .access-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+  }
+
+  .about-column {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 16px;
+  }
+
+  .brand img,
+  .section-logo {
+    width: 118px;
+  }
+
+  .recipe-box {
+    order: 4;
+  }
+
+  main {
+    padding: 16px 18px 56px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 42px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .eyebrow {
+    font-size: 17px;
+  }
+
+  .benefits li {
+    gap: 16px;
+  }
+
+  .hero-copy .cancel-link {
+    margin-left: auto;
+  }
+
+  .access-section {
+    padding-top: 72px;
+  }
+
+  .access-section h2,
+  .subscribe-section h2 {
+    font-size: 26px;
+  }
+
+  .access-grid,
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .subscribe-section {
+    margin-top: 76px;
+  }
+
+  .site-footer {
+    padding: 36px 24px;
+  }
+
+  .email-form {
+    margin-bottom: 56px;
+  }
+}
